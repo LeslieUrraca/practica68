@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <input type="checkbox" id="checkbox1" name="checkbox1">
+  acepta los términos y condiciones?
+  <br>
+  <input type="button" id="boton" name="boton" value="aceptar" disabled>
+  
+<script>
+  addEventListener('DOMContentLoaded',inicio,false);
+  
+  function inicio()
+  {
+    document.getElementById('checkbox1').addEventListener('change',cambio,false);
+  }
+
+  function cambio()
+  {
+
+    if (document.getElementById('checkbox1').checked==true)
+    {
+      document.getElementById('boton').disabled=false;
+    } 
+    else    
+      document.getElementById('boton').disabled=true;
+  }
+</script>
+  
+</body>
+</html>
